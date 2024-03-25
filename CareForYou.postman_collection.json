@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "7a44cf68-a8bb-4fab-85fd-7299079126cf",
+		"name": "CareForYou",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26301990"
+	},
+	"item": [
+		{
+			"name": "create customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nameInfoDto\": {\n    \"firstName\": \"John\",\n    \"middleName\": \"Doe\",\n    \"lastName\": \"Smith\"\n  },\n  \"addressInfoDto\": {\n    \"addressLine1\": \"123 Main St\",\n    \"addressLine2\": \"Apt 101\",\n    \"addressLine3\": \"\",\n    \"city\": \"Springfield\",\n    \"state\": \"IL\",\n    \"pinCode\": 12345\n  },\n  \"eligibilityDto\": {\n    \"isSmoker\": false,\n    \"isTrafficViolationExits\": false,\n    \"isCriminalRecordExits\": false\n  },\n  \"birthDate\": \"1990-01-01\",\n  \"customerNumber\": \"customer-1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/customer/write",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"customer",
+						"write"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/customer/1/load",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"customer",
+						"1",
+						"load"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create policy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"policyNumber\": \"POL456789\",\n  \"policyName\": \"Auto Insurance\",\n  \"policyPlan\": \"Comprehensive Coverage\",\n  \"benefits\": [\n    {\n      \"benefitName\": \"Collision Coverage\",\n      \"benefitAmount\": 5000.00\n    },\n    {\n      \"benefitName\": \"Liability Coverage\",\n      \"benefitAmount\": 10000.00\n    },\n    {\n      \"benefitName\": \"Personal Injury Protection\",\n      \"benefitAmount\": 2000.00\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/policy/write",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"policy",
+						"write"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create claim",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerId\": \"customer-1\",\n  \"description\": \"Car accident on the highway\",\n  \"incidentDate\": \"2024-03-24\",\n  \"policyName\": \"Health Insurance\",\n  \"benefitToClaim\": \"Hospitalization Coverage\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/claim/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"claim",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

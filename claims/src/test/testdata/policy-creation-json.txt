@@ -1,0 +1,62 @@
+Policy 1:
+{
+  "policyNumber": "POL123456",
+  "policyName": "Health Insurance",
+  "policyPlan": "Gold Plan",
+  "benefits": [
+    {
+      "benefitName": "Hospitalization Coverage",
+      "benefitAmount": 5000.00
+    },
+    {
+      "benefitName": "Outpatient Consultation",
+      "benefitAmount": 2000.00
+    },
+    {
+      "benefitName": "Prescription Medication",
+      "benefitAmount": 1000.00
+    }
+  ]
+}
+Policy 2:
+
+{
+  "policyNumber": "POL987654",
+  "policyName": "Life Insurance",
+  "policyPlan": "Term Life",
+  "benefits": [
+    {
+      "benefitName": "Death Benefit",
+      "benefitAmount": 100000.00
+    },
+    {
+      "benefitName": "Accidental Death Benefit",
+      "benefitAmount": 50000.00
+    },
+    {
+      "benefitName": "Permanent Disability Benefit",
+      "benefitAmount": 75000.00
+    }
+  ]
+}
+Policy 3:
+
+{
+  "policyNumber": "POL456789",
+  "policyName": "Auto Insurance",
+  "policyPlan": "Comprehensive Coverage",
+  "benefits": [
+    {
+      "benefitName": "Collision Coverage",
+      "benefitAmount": 5000.00
+    },
+    {
+      "benefitName": "Liability Coverage",
+      "benefitAmount": 10000.00
+    },
+    {
+      "benefitName": "Personal Injury Protection",
+      "benefitAmount": 2000.00
+    }
+  ]
+}
