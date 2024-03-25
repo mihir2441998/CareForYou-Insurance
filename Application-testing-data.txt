@@ -1,0 +1,38 @@
+Happy Path:
+{
+  "customerId": "customer-1",
+  "description": "Car accident on the highway",
+  "incidentDate": "2024-03-24",
+  "policyName": "Health Insurance",
+  "benefitToClaim": "Hospitalization Coverage"
+}
+
+**********************************************************************
+Invalid Customer:
+{
+  "customerId": "fake_customer", // provide invalid customer ID
+  "description": "Car accident on the highway",
+  "incidentDate": "2024-03-24",
+  "policyName": "Health Insurance",
+  "benefitToClaim": "Hospitalization Coverage"
+}
+
+**********************************************************************
+Invalid Policy:
+{
+  "customerId": "customer-1",
+  "description": "Car accident on the highway",
+  "incidentDate": "2024-03-24",
+  "policyName": "fake-policy", // provide invalid policy
+  "benefitToClaim": "Hospitalization Coverage"
+}
+
+**********************************************************************
+Invalid benefit:
+{
+  "customerId": "customer-1",
+  "description": "Car accident on the highway",
+  "incidentDate": "2024-03-24",
+  "policyName": "Health Insurance",
+  "benefitToClaim": "fake_benefit" // provide invalid benefit
+}

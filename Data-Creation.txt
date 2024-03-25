@@ -1,0 +1,138 @@
+1. For Policy Creation:(POST http://localhost:3003/policy/write)
+
+Policy 1:
+{
+  "policyNumber": "POL123456",
+  "policyName": "Health Insurance",
+  "policyPlan": "Gold Plan",
+  "benefits": [
+    {
+      "benefitName": "Hospitalization Coverage",
+      "benefitAmount": 5000.00
+    },
+    {
+      "benefitName": "Outpatient Consultation",
+      "benefitAmount": 2000.00
+    },
+    {
+      "benefitName": "Prescription Medication",
+      "benefitAmount": 1000.00
+    }
+  ]
+}
+Policy 2:
+
+{
+  "policyNumber": "POL987654",
+  "policyName": "Life Insurance",
+  "policyPlan": "Term Life",
+  "benefits": [
+    {
+      "benefitName": "Death Benefit",
+      "benefitAmount": 100000.00
+    },
+    {
+      "benefitName": "Accidental Death Benefit",
+      "benefitAmount": 50000.00
+    },
+    {
+      "benefitName": "Permanent Disability Benefit",
+      "benefitAmount": 75000.00
+    }
+  ]
+}
+Policy 3:
+
+{
+  "policyNumber": "POL456789",
+  "policyName": "Auto Insurance",
+  "policyPlan": "Comprehensive Coverage",
+  "benefits": [
+    {
+      "benefitName": "Collision Coverage",
+      "benefitAmount": 5000.00
+    },
+    {
+      "benefitName": "Liability Coverage",
+      "benefitAmount": 10000.00
+    },
+    {
+      "benefitName": "Personal Injury Protection",
+      "benefitAmount": 2000.00
+    }
+  ]
+}
+
+2. For Customer Creation: (POST http://localhost:3001/customer/write)
+
+Customer:1
+{
+  "nameInfoDto": {
+    "firstName": "John",
+    "middleName": "Doe",
+    "lastName": "Smith"
+  },
+  "addressInfoDto": {
+    "addressLine1": "123 Main St",
+    "addressLine2": "Apt 101",
+    "addressLine3": "",
+    "city": "Springfield",
+    "state": "IL",
+    "pinCode": 12345
+  },
+  "eligibilityDto": {
+    "isSmoker": false,
+    "isTrafficViolationExits": false,
+    "isCriminalRecordExits": false
+  },
+  "birthDate": "1990-01-01",
+  "customerNumber": "customer-1"
+}
+
+Customer 2:
+{
+  "nameInfoDto": {
+    "firstName": "Alice",
+    "middleName": "Marie",
+    "lastName": "Johnson"
+  },
+  "addressInfoDto": {
+    "addressLine1": "456 Oak St",
+    "addressLine2": "Unit 202",
+    "addressLine3": "",
+    "city": "Greenville",
+    "state": "SC",
+    "pinCode": 54321
+  },
+  "eligibilityDto": {
+    "isSmoker": true,
+    "isTrafficViolationExits": false,
+    "isCriminalRecordExits": true
+  },
+  "birthDate": "1985-05-15",
+  "customerNumber": "customer-2"
+}
+
+Customer 3:
+{
+  "nameInfoDto": {
+    "firstName": "David",
+    "middleName": "Lee",
+    "lastName": "Brown"
+  },
+  "addressInfoDto": {
+    "addressLine1": "789 Elm St",
+    "addressLine2": "Apt 301",
+    "addressLine3": "",
+    "city": "Seattle",
+    "state": "WA",
+    "pinCode": 98765
+  },
+  "eligibilityDto": {
+    "isSmoker": false,
+    "isTrafficViolationExits": true,
+    "isCriminalRecordExits": false
+  },
+  "birthDate": "1978-11-20",
+  "customerNumber": "customer-3",
+}
